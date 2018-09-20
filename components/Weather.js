@@ -1,5 +1,4 @@
 import React from 'react';
-import background from '../bg.jpeg';
 import { StyleSheet, Text, View ,ImageBackground} from 'react-native';
 import Forecast from './Forecast';
 
@@ -15,7 +14,7 @@ export default class Weather extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground source={background} style={styles.backdrop}>
+                <ImageBackground source={require('../bg.jpeg')} style={styles.backdrop}>
                     <Text>Zip code is {this.props.zipCode}.</Text>
                     <Forecast {...this.state.forecast} />
                 </ImageBackground>
