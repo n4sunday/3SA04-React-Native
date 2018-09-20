@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View ,ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import Forecast from './Forecast';
 
 export default class Weather extends React.Component {
@@ -15,15 +15,20 @@ export default class Weather extends React.Component {
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../bg.jpeg')} style={styles.backdrop}>
-                    <Text>Zip code is {this.props.zipCode}.</Text>
-                    <Forecast {...this.state.forecast} />
+                <View style={styles.flexDir}>
+                        <Text>Zip code is {this.props.zipCode}.</Text>
+                        <Forecast {...this.state.forecast} />
+                    </View>
                 </ImageBackground>
-            </View>
+            </View >
         );
     }
 }
 const styles = StyleSheet.create({
     container: { paddingTop: 25 },
     backdrop: { width: '100%', height: '100%' },
+    flexDir: {flexDirection: 'row',justifyContent: 'center'},
+    
 });
+
 
