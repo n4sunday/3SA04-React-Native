@@ -27,7 +27,7 @@ export default class Weather extends React.Component {
 const styles = StyleSheet.create({
     container: { paddingTop: 25 },
     backdrop: { width: '100%', height: '100%' },
-    flexDir: {flexDirection: 'row',justifyContent: 'center'},
+    flexDir: {flexDirection: 'column',justifyContent: 'center' ,alignItems: 'center'},
     
 });
 
