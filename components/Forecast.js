@@ -4,11 +4,17 @@ export default class Forecast extends React.Component {
     render() {
         return (
             <View>
-                <Text>{this.props.main}</Text>
-                <Text>{this.props.description}</Text>
-                <Text>{this.props.temp}</Text>
-                <Text>°C</Text>
+                <Text style={styles.text2}>{this.props.main}</Text>
+                <Text style={styles.text3}>{this.props.description}</Text>
+                <Text style={styles.text4}>{this.props.temp} °C</Text>
+                <Text style={styles.text4}></Text>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    text2: {textAlign: 'center', fontSize: 45, color:'white', opacity: 0.5,},
+    text3: {textAlign: 'center', fontSize: 25, color:'white', opacity: 0.5,},
+    text4: {textAlign: 'center', fontSize: 45, color:'white', opacity: 0.5,},   
+});

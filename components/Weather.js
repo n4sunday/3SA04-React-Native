@@ -7,7 +7,7 @@ export default class Weather extends React.Component {
         super(props);
         this.state = {
             forecast: {
-                main: '-', description: '-', temp: 0
+                main: 'main', description: 'description', temp: 0
             }
         }
     }
@@ -16,7 +16,7 @@ export default class Weather extends React.Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../bg.jpeg')} style={styles.backdrop}>
                 <View style={styles.flexDir}>
-                        <Text>Zip code is {this.props.zipCode}.</Text>
+                        <Text style={styles.text1}>Zip code is {this.props.zipCode}.</Text>
                         <Forecast {...this.state.forecast} />
                     </View>
                 </ImageBackground>
@@ -27,8 +27,16 @@ export default class Weather extends React.Component {
 const styles = StyleSheet.create({
     container: { paddingTop: 25 },
     backdrop: { width: '100%', height: '100%' },
-    flexDir: {flexDirection: 'column',justifyContent: 'center' ,alignItems: 'center'},
-    
+    flexDir: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',   
+        height: 360,
+        backgroundColor: 'black',
+        opacity: 0.5,
+
+    },
+    text1: {textAlign: 'center' , fontSize: 20 , color:'white', opacity: 0.5,},  
 });
 
 
