@@ -29,7 +29,16 @@ export default class Weather extends React.Component {
                 console.warn(error);
             });
     }
+
     componentDidMount = () => this.fetchData()
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.zipCode !== this.props.zipCode) {
+            this.fetchData()
+        }
+    }
+
+    
 
     render() {
         return (
