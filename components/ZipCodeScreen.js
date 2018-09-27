@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { StyleSheet, FlatList, View, Text, TouchableHighlight } from 'react-native';
 const availableZipItems = [
     { place: 'Hatyai', code: '90110' },
@@ -7,6 +6,7 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
+    { place: 'Phuket', code: '83120' },
 ]
 const ZipItem = ({ place, code, navigate }) => (
     <TouchableHighlight onPress={() => navigate('Weather', { zipCode: code })}>
@@ -22,7 +22,7 @@ const _keyExtractor = item => item.code
 export default class WeatherScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTitle: (<Text>Choose a zip code</Text>),
+            headerTitle: (<Text style={styles.text5}>Choose a zip code</Text>),
         }
     }
     render() {
