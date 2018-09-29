@@ -38,8 +38,6 @@ export default class Weather extends React.Component {
         }
     }
 
-    
-
     render() {
         return (
             <View style={styles.container}>
@@ -49,6 +47,7 @@ export default class Weather extends React.Component {
                         <Forecast {...this.state.forecast} />
                     </View>
                 </ImageBackground>
+
             </View >
         );
     }
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
         opacity: 0.5,
 
     },
-    text1: { textAlign: 'center', fontSize: 20, color: 'white', opacity: 0.5, },
+    text1: { textAlign: 'center', fontSize: 25, color: 'white', opacity: 1, },
 });
 
 
